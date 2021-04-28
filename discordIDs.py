@@ -30,14 +30,14 @@ DiscordGuildIDs={
 }
 
 DiscordChannelIDs={
-    'LoggingChannel':643231901452337192,
+    'LoggingChannel':836745981722361887,
     'Pokedex':597140352411107328,
     'RedditPosts':665317972646166538,
-    'General':557366982471581718,
+    'General':828616929472282648,
     'ServerRules':634012658625937408,
     'NormieHeroes':568058278165348362,
     'Samuro':564528564196605973,
     'SecretCabal':607922629902598154,
     'Pepega':576018992624435220,
-    'Probius':571531013558239238,
+    'Probius':836575484921643058,
 }

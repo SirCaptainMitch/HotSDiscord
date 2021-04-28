@@ -1,0 +1,6 @@
+aiohttp
+discord
+nest_asyncio
+bs4
+requests
+Pillow

@@ -74,8 +74,8 @@ async def mainProbius(client,message,texts):
 			break
 	else:#The elusive for else control flow
 		guildname=message.channel.guild.name
-		guildname='Nexus school' if guildname=='Nexus Schoolhouse' else guildname#Nexus Schoolhouse is too long 
-		guildname='Schuifpui' if guildname=='De Schuifpui Schavuiten' else guildname
+		guildname='Undecided' if guildname=='Undecided Team' else guildname
+		# guildname='Schuifpui' if guildname=='De Schuifpui Schavuiten' else guildname
 		channelName=message.channel.name
 		channelName='hots' if channelName=='heroes-got-canceled' else channelName
 		loggingMessage=guildname+' '*(15-len(guildname))+channelName+' '+' '*(17-len(channelName))+str(message.author.name)+' '*(18-len(str(message.author.name)))+' '+message.content
@@ -433,14 +433,13 @@ class MyClient(discord.Client):
 		print('Filling up with Reddit posts...')
 		self.forwardedPosts=[]
 		self.seenTitles=await fillPreviousPostTitles(self)#Fills seenTitles with all current titles
-		print('Fetching proxy emojis...')
-		self.proxyEmojis=await getProxyEmojis(client.get_guild(603924426769170433))
+		# print('Fetching proxy emojis...')
+		# self.proxyEmojis=await getProxyEmojis(client.get_guild(836576730830340136))
 		print('Downloading heroes...')
 		await downloadAll(self,argv)
 		self.ready=True
 		print('Ready!')
-		self.rulesChannel=self.get_channel(DiscordChannelIDs['ServerRules'])#server-rules
-		self.welcomeMessage='Please read '+self.rulesChannel.mention+' and type here your **`Region`, `Rank`, and `Preferred Colour`**, separated by commas, to get sorted and unlock the rest of the channels <:OrphAYAYA:657172520092565514>'
+		# self.rulesChannel=self.get_channel(DiscordChannelIDs['ServerRules'])#server-rules
 
 	async def on_message(self, message):
 		for i in char:
@@ -648,13 +647,13 @@ class MyClient(discord.Client):
 			await channel.send('<@329447886465138689>, '+member.display_name+' changed their avatar! '+(await getAvatar(self,channel,member.mention)))'''
 
 
-global exitBool
-exitBool=0			
-while not exitBool: #Restart
-	exitBool=1
-	intents = discord.Intents.default()  # All but the two privileged ones
-	intents.members = True  # Subscribe to the Members intent
+# global exitBool
+# exitBool=0			
+# while not exitBool: #Restart
+# 	exitBool=1
+intents = discord.Intents.default()  # All but the two privileged ones
+intents.members = True  # Subscribe to the Members intent
 
-	asyncio.set_event_loop(asyncio.new_event_loop())
-	client = MyClient(command_prefix='!', intents=intents)
-	client.run(getProbiusToken())
+asyncio.set_event_loop(asyncio.new_event_loop())
+client = MyClient(command_prefix='!', intents=intents)
+client.run(getProbiusToken())
