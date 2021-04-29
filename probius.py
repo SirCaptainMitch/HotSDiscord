@@ -20,12 +20,11 @@ from printFunctions import *	#The functions that output the things to print
 from heroesTalents import *		#The function that imports the hero pages
 from emojis import *			#Emojis
 from miscFunctions import*		#Edge cases and help message
-from getProbiusToken import *	#The token is in an untracked file because this is a public Github repo
+from getProbiusToken import *
 from builds import *			#Hero builds
 from rotation import *			#Weekly rotation
 from quotes import *			#Lock-in quotes
 from draft import *
-from pokedex import *
 from reddit import *
 from sorting import *
 from patchNotes import *
@@ -48,8 +47,6 @@ randomAliases=['random','ra','rand']
 draftAliases=['draft','d','phantomdraft','pd','mockdraft','md']
 colourAliases=['colour','colours','c','colors','color']
 heroStatsAliases=['stats','info']
-pokedexAliases=['pokedex','main','mains','p']
-updatePokedexAliases=['updatepokedex','up']
 emojiAliases=['emoji','emojis','emote','emotes']
 coinsAliases=['coin','flip','coinflip','cf']
 redditAliases=['reddit','re']
@@ -152,22 +149,11 @@ async def mainProbius(client,message,texts):
 		if command in talentAliases:
 			await message.channel.send("Call a hero's talent tier with [hero/level]")
 			continue
-		if command in updatePokedexAliases:
-			if client.isEditingPokedex:
-				await message.channel.send('Please wait, the pokedex is already being edited!')
-				continue
-			client.isEditingPokedex=1
-			await updatePokedex(client,text,message)
-			client.isEditingPokedex=0
-			continue
 		if command in rollAliases:
 			await roll(text,message)
 			continue
 		if command=='sort':
 			await sortFromMessage(text[1],message,client)
-			continue
-		if command in pokedexAliases:
-			await pokedex(client,message.channel,aliases(text[1]))
 			continue
 		if command==':disapproval':
 			await message.channel.send('ಠ_ಠ')
@@ -415,7 +401,6 @@ class MyClient(discord.Client):
 		self.heroPages={}
 		self.lastWelcomeImage=[]
 		self.waitList=[]
-		self.isEditingPokedex=0
 		self.ready=False#Wait until ready before taking commands
 
 		#Region:region lfg
@@ -543,7 +528,7 @@ class MyClient(discord.Client):
 
 
 		elif message.author.id==DiscordUserIDs['Probius'] and str(payload.emoji)=='👎':#Message is from Probius, and is downvoted with thumbs down
-			if message.channel.id in [DiscordChannelIDs['RedditPosts'],DiscordChannelIDs['Pokedex']]:#Message is in reddit posts or pokedex
+			if message.channel.id in [DiscordChannelIDs['RedditPosts']]:#Message is in reddit posts
 				output=member.mention+'<:bonk:761981366744121354>'
 				await client.get_channel(DiscordChannelIDs['General']).send(output)#general
 				return
@@ -558,11 +543,10 @@ class MyClient(discord.Client):
 			await message.delete()
 			return
 
-		elif message.author.id==DiscordUserIDs['Probius'] and 'React to ping' in message.content and str(payload.emoji)=='👍':#Message from Probius, pings Pokedex:
+		elif message.author.id==DiscordUserIDs['Probius'] and 'React to ping' in message.content and str(payload.emoji)=='👍':#Message from Probius,:
 			output=member.name+' started a balance discussion'
 			print(output)
 			await client.get_channel(DiscordChannelIDs['LoggingChannel']).send('`'+output+'`')
-			await pingPokedex(self,message,member)
 			return
 		elif str(payload.emoji)=='⚽' and message.channel.id==DiscordChannelIDs['General']:
 			await sortFromReaction(message,member.id,self)
@@ -614,7 +598,6 @@ class MyClient(discord.Client):
 			print(member.name+' left')
 			channel=guild.get_channel(616617012948631552)#super-secret-cabal
 			await channel.send(member.name+' left the server <:samudab:578998204142452747>')
-			await removePokedex(self,member.id)
 
 	async def bgTaskSubredditForwarding(self):
 		await self.wait_until_ready()
