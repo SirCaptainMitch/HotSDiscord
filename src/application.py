@@ -1,9 +1,3 @@
-#A HotS Discord bot
-#Call in Discord with [hero/modifier]
-#Modifier is hotkey or talent tier
-#Data is pulled from HotS wiki
-#Project started on 14/9-2019
-
 import asyncio
 import io
 import aiohttp
@@ -11,20 +5,19 @@ import re
 import random
 import discord
 import time
-from sys import argv#Where to get the JSONs
+from sys import argv
 from discord.ext import tasks
 from discord.ext import commands
 
-# from functions import * 
-from aliases import *			#Spellcheck and alternate names for heroes
-from printFunctions import *	#The functions that output the things to print
-from heroesTalents import *		#The function that imports the hero pages
-from emojis import *			#Emojis
-from miscFunctions import*		#Edge cases and help message
-from getProbiusToken import *
-from builds import *			#Hero builds
-from rotation import *			#Weekly rotation
-from quotes import *			#Lock-in quotes
+from aliases import *
+from printFunctions import *
+from heroesTalents import *
+from emojis import *
+from miscFunctions import *
+from getDiscordToken import *
+from builds import *
+from rotation import *
+from quotes import *
 from draft import *
 from reddit import *
 from sorting import *
@@ -35,7 +28,7 @@ from discordIDs import *
 from imageColour import *
 
 wsReactionRoles={'🇧':DiscordRoleIDs['BalanceTeam'],'🇩':DiscordRoleIDs['DraftAddict'],'🇱':DiscordRoleIDs['LFG']}
-drafts={}#Outside of client so it doesn't reset on periodic restarts or [restart]
+drafts={} #Outside of client so it doesn't reset on periodic restarts or [restart]
 lastDraftMessageDict={}
 draftNames={}
 
@@ -63,32 +56,27 @@ restartAliases=['restart','shutdown','stop']
 confidenceAliases=['ci','confidence','confidenceinterval']
 heroAliases=['hero', 'heroes', 'bruiser', 'healer', 'support', 'ranged', 'melee', 'assassin', 'mage', 'marksman', 'tank', 'marksmen']
 
+### TODO: 
+### add debug mode arg for printing logging messages 
+### add log file for logging exceptions / debugs 
+###
 
-async def mainProbius(client,message,texts):
+async def main(client,message,texts):
 	global exitBool
-	for draftAlias in draftAliases: #Don't want to log draft commands because they really spam.
-		if 'new' in message.content.lower():continue
+	for draftAlias in draftAliases:
+		if 'new' in message.content.lower():
+			continue
 		if '['+draftAlias+'/' in message.content.lower():
 			break
-	else:#The elusive for else control flow
-		guildname=message.channel.guild.name
-		guildname='Undecided' if guildname=='Undecided Team' else guildname
-		# guildname='Schuifpui' if guildname=='De Schuifpui Schavuiten' else guildname
+	else:
 		channelName=message.channel.name
-		channelName='hots' if channelName=='heroes-got-canceled' else channelName
-		loggingMessage=guildname+' '*(15-len(guildname))+channelName+' '+' '*(17-len(channelName))+str(message.author.name)+' '*(18-len(str(message.author.name)))+' '+message.content
-		print(loggingMessage)
+		# print(loggingMessage)
 		await client.get_channel(DiscordChannelIDs['LoggingChannel']).send('`{}`'.format(loggingMessage))
 
 	for text in texts:
 		command=text[0].replace(' ','')
-		if command in ['trait','r','w','e','passive','react','...']:#Do nothing
-			continue
-
-		if command in ['avatarcolour','avatarcolor']:
-			#Hogs CPU resources
-			#await avatarColour(client,message.channel,text[1])
-			continue
+		# if command in ['trait','r','w','e','passive','react','...']:
+		# 	continue
 		if command in ['event','season']:
 			await event(message.channel)
 			continue
@@ -102,10 +90,7 @@ async def mainProbius(client,message,texts):
 			await schedule(message)
 			continue
 		if command =='sortlist':
-			if message.guild.get_role(DiscordRoleIDs['Olympian']) not in message.author.roles:#Not mod
-				await message.channel.send(message.author.mention+' <:bonk:761981366744121354>')
-			else:
-				await sortList(message)
+			await sortList(message)
 			continue
 		if command in ['name', 'names']:
 			names=[(i.nick or i.name)+(' ('+i.name+')')*int(bool(i.nick)) for i in message.guild.members if text[1].lower() in i.name.lower() or i.nick and text[1].lower() in i.nick.lower()]
@@ -304,7 +289,7 @@ async def mainProbius(client,message,texts):
 			except:
 				pass
 			continue
-		
+
 		output=''
 		try:
 			tier=text[1]#If there is no identifier, then it throws exception
@@ -343,7 +328,7 @@ async def mainProbius(client,message,texts):
 				continue
 			else:
 				output=await printSearch(abilities, talents, tier, hero, True)
-		
+
 		if len(output)==2:#If len is 2, then it's an array with output split in half
 			if message.channel.name=='rage':
 				await message.channel.send(output[0].upper())
@@ -436,7 +421,7 @@ class MyClient(discord.Client):
 		pingList=[pingNames[i] for i in pingNames.keys() if '@'+i in message.content.replace(' ','')]
 		if pingList:
 			await message.channel.send(' '.join(['<@'+str(i)+'>' for i in pingList]))
-			
+
 		if message.embeds and message.channel.id==DiscordChannelIDs['General'] and 'View tweet' in message.content:#Message with embed in #general
 			await message.channel.send(message.embeds[0].thumbnail.url)
 			await message.edit(suppress=True)
@@ -472,12 +457,12 @@ class MyClient(discord.Client):
 
 		elif '[' in message.content:
 			texts=findTexts(message)
-			await mainProbius(self,message,texts)
+			await main(self,message,texts)
 
 		await removeEmbeds(message)
 		if message.author.id==0:#Birthday cake
 			await message.add_reaction('🍰')
-		
+
 	async def on_message_edit(self,before, after):
 		#Don't respond to ourselves
 		if after.embeds and after.channel.id==DiscordChannelIDs['General'] and 'New dev tweet!' in after.content:#Message with embed in #general
@@ -496,7 +481,7 @@ class MyClient(discord.Client):
 				beforeTexts=[]
 			newTexts=[i for i in findTexts(after) if i not in beforeTexts]
 			if newTexts:
-				await mainProbius(self,after,newTexts)
+				await main(self,after,newTexts)
 
 		await removeEmbeds(after)
 		if '<@' in after.content:
@@ -591,7 +576,7 @@ class MyClient(discord.Client):
 		guild=member.guild
 		if guild.name=='Wind Striders':
 			unsorted=guild.get_role(DiscordRoleIDs['Unsorted'])
-			if unsorted in member.roles:	
+			if unsorted in member.roles:
 				print(member.name+' left (unsorted)')
 				channel=guild.get_channel(DiscordChannelIDs['General'])#general
 				await channel.send(member.name+' (unsorted) left <:samudab:578998204142452747>')
@@ -632,7 +617,7 @@ class MyClient(discord.Client):
 
 
 # global exitBool
-# exitBool=0			
+# exitBool=0
 # while not exitBool: #Restart
 # 	exitBool=1
 intents = discord.Intents.default()  # All but the two privileged ones

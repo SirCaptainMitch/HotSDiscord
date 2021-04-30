@@ -1,10 +1,23 @@
 # Probius
 
-A HotS Discord bot. Call in Discord with [hero/modifier], where modifier is hotkey or talent tier. Data is pulled from HotS wiki. 
+This is a forked version of the Nexus School House HotS Discord bot. It is being re-worked to be server agnostic, containerized ,and easily configurable.
 
-Written in Python 3.5.3 and running on a Raspberry Pi 3 B+
+Call in Discord with [hero/modifier], where modifier is hotkey or talent tier. Data is pulled from HotS wiki. 
 
-Project started on 14/9-2019
+Written in Python 3.5.3
+
+# Installation and Setup
+
+The discord bot should be run in a Virtual Environment ( venv ) to prevent collisions on a local machine or server. 
+
+1. Setup the Viirtual Environment
+    > python -m venv venv
+1. Install the required modules 
+    > python -m pip install -r requirements.txt 
+1. Run the main bot function. 
+    > python ./src/application.py
+
+
 
 # File description
 

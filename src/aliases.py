@@ -132,7 +132,7 @@ def aliases(hero):
 		return 'Xul'
 	elif hero in ['goat','spacegoat']:
 		return 'Yrel'
-	elif hero in ['zerathul']:
+	elif hero in ['zerathul', 'zera']:
 		return 'Zeratul'
 	elif hero in ["zj",'zuljin','troll','luljin']:
 		return "Zul'jin"

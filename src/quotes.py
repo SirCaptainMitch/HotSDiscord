@@ -3,7 +3,7 @@ from aliases import *
 from printFunctions import getHeroes
 
 def getQuote(hero):
-	with open('quotes.txt','r') as f:
+	with open(r'./heroConfig/quotes.txt','r') as f:
 		for line in f:
 			if hero.replace('ú','u') in line:
 				return '**'+hero.replace('_',' ')+':** '+line[line.index('; ')+2:]
