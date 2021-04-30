@@ -69,14 +69,15 @@ async def main(client,message,texts):
 		if '['+draftAlias+'/' in message.content.lower():
 			break
 	else:
-		channelName=message.channel.name
+		channelName = message.channel.name
+		loggingMessage = channelName + ' ' + ' '*(17-len(channelName)) + str(message.author.name) + ' '*(18-len(str(message.author.name))) + ' ' + message.content
 		# print(loggingMessage)
 		await client.get_channel(DiscordChannelIDs['LoggingChannel']).send('`{}`'.format(loggingMessage))
 
 	for text in texts:
 		command=text[0].replace(' ','')
-		# if command in ['trait','r','w','e','passive','react','...']:
-		# 	continue
+		if command in ['trait','r','w','e','passive','react','...']:
+			continue
 		if command in ['event','season']:
 			await event(message.channel)
 			continue
@@ -92,10 +93,10 @@ async def main(client,message,texts):
 		if command =='sortlist':
 			await sortList(message)
 			continue
-		if command in ['name', 'names']:
-			names=[(i.nick or i.name)+(' ('+i.name+')')*int(bool(i.nick)) for i in message.guild.members if text[1].lower() in i.name.lower() or i.nick and text[1].lower() in i.nick.lower()]
-			await message.channel.send('\n'.join(names)+'\n'+str(len(names))+' '+text[1].capitalize()+'s')
-			continue
+		# if command in ['name', 'names']:
+		# 	names=[(i.nick or i.name)+(' ('+i.name+')')*int(bool(i.nick)) for i in message.guild.members if text[1].lower() in i.name.lower() or i.nick and text[1].lower() in i.nick.lower()]
+		# 	await message.channel.send('\n'.join(names)+'\n'+str(len(names))+' '+text[1].capitalize()+'s')
+		# 	continue
 		if command in heroAliases+[i+'s' for i in heroAliases]:
 			await heroes(message,text,message.channel,client)
 			continue
@@ -155,10 +156,10 @@ async def main(client,message,texts):
 		if command in colourAliases:
 			await message.channel.send(file=discord.File('WS colours.png'))
 			continue
-		if message.author.id==DiscordUserIDs['Asddsa']:
-			if command=='serverchannels':
-				await message.channel.send([channel.name for channel in message.channel.guild.channels])
-				continue
+		if message.author.id==DiscordUserIDs['TheCaptain']:
+			# if command=='serverchannels':
+			# 	await message.channel.send([channel.name for channel in message.channel.guild.channels])
+			# 	continue
 			if command=='repeat' and len(text)==2:
 				await message.channel.send(text[1])
 				await message.delete()
