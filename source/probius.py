@@ -15,6 +15,7 @@ from sys import argv#Where to get the JSONs
 from discord.ext import tasks
 from discord.ext import commands
 
+# from functions import * 
 from aliases import *			#Spellcheck and alternate names for heroes
 from printFunctions import *	#The functions that output the things to print
 from heroesTalents import *		#The function that imports the hero pages

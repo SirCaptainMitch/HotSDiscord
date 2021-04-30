@@ -1,5 +1,6 @@
 DiscordUserIDs={
     'Asddsa':183240974347141120,
+    'TheCaptain': 176118079942688770,
     'MindHawk':129702871837966336,
     'SomeoneNew':247677408386351105,
     'Blackstorm':329447886465138689,
@@ -12,7 +13,7 @@ DiscordUserIDs={
     'Weebatsu':408114527947980802,
 }
 
-ProbiusPrivilegesIDs=[DiscordUserIDs['Asddsa']]
+ProbiusPrivilegesIDs=[DiscordUserIDs['TheCaptain']]
 
 DiscordRoleIDs={
     'IllusionMaster':557550150109888513,
@@ -31,13 +32,8 @@ DiscordGuildIDs={
 
 DiscordChannelIDs={
     'LoggingChannel':836745981722361887,
-    'Pokedex':597140352411107328,
-    'RedditPosts':665317972646166538,
+    'RedditPosts':837656948798783538,
     'General':828616929472282648,
-    'ServerRules':634012658625937408,
-    'NormieHeroes':568058278165348362,
-    'Samuro':564528564196605973,
-    'SecretCabal':607922629902598154,
-    'Pepega':576018992624435220,
+    'ServerRules':837657038250835978,
     'Probius':836575484921643058,
 }
