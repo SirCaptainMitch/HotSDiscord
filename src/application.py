@@ -93,10 +93,6 @@ async def main(client,message,texts):
 		if command =='sortlist':
 			await sortList(message)
 			continue
-		# if command in ['name', 'names']:
-		# 	names=[(i.nick or i.name)+(' ('+i.name+')')*int(bool(i.nick)) for i in message.guild.members if text[1].lower() in i.name.lower() or i.nick and text[1].lower() in i.nick.lower()]
-		# 	await message.channel.send('\n'.join(names)+'\n'+str(len(names))+' '+text[1].capitalize()+'s')
-		# 	continue
 		if command in heroAliases+[i+'s' for i in heroAliases]:
 			await heroes(message,text,message.channel,client)
 			continue
@@ -157,26 +153,9 @@ async def main(client,message,texts):
 			await message.channel.send(file=discord.File('WS colours.png'))
 			continue
 		if message.author.id==DiscordUserIDs['TheCaptain']:
-			# if command=='serverchannels':
-			# 	await message.channel.send([channel.name for channel in message.channel.guild.channels])
-			# 	continue
 			if command=='repeat' and len(text)==2:
 				await message.channel.send(text[1])
 				await message.delete()
-				continue
-		if command== 'unsorted' and message.channel.guild.name=='Wind Striders':
-			if DiscordRoleIDs['Olympian'] in [role.id for role in message.author.roles]:#Olympian
-				channel = client.get_channel(DiscordChannelIDs['General'])#WSgeneral
-				role=channel.guild.get_role(DiscordRoleIDs['Unsorted'])#UNSORTED
-				rulesChannel=channel.guild.get_channel(DiscordChannelIDs['ServerRules'])#server-rules
-				await channel.send('Note to all '+role.mention+': '+client.welcomeMessage)
-				await channel.send(content='https://cdn.discordapp.com/attachments/576018992624435220/743917827718905896/sorting.gif',file=discord.File('WS colours.png'))
-				continue
-		if command=='byprobiusbepurged' and message.channel.guild.name=='Wind Striders':
-			if DiscordRoleIDs['Olympian'] in [role.id for role in message.author.roles]:
-				people=[i for i in message.channel.guild.members if DiscordRoleIDs['Unsorted'] in [role.id for role in i.roles]]
-				for person in people:
-					await message.channel.guild.kick(person,reason='Did not sort in time!')
 				continue
 		if command == 'vote':
 			await vote(message,text)
@@ -190,7 +169,7 @@ async def main(client,message,texts):
 		if command in ['avatar','a']:
 			await message.channel.send(await getAvatar(client,message.channel,text[1]))
 			continue
-		if command=='':#Empty string. Aliases returns Abathur when given this.
+		if command=='':
 			continue
 		if command in draftAliases:
 			await draft(drafts,message.channel,message.author,text,lastDraftMessageDict,draftNames)
@@ -201,20 +180,13 @@ async def main(client,message,texts):
 				continue
 			command=random.choice(getHeroes())
 		if command in helpAliases:
-			if len(text)==2 and command in heroStatsAliases:#[info/hero]
+			if len(text)==2 and command in heroStatsAliases: #[info/hero]
 				await heroStats(aliases(text[1]),message.channel)
 			else:
 				await message.channel.send(helpMessage())
 			continue
 		if command in buildsAliases:
 			if len(text)==2:
-				if message.channel.guild.id==DiscordGuildIDs['WindStriders'] and message.channel.id!=DiscordChannelIDs['Probius'] and message.content[0]=='[':#In WS, not in #probius, first character is [
-					if message.guild.get_role(DiscordRoleIDs['CoreMember']) not in message.author.roles:#Not core member
-						await message.guild.get_channel(DiscordChannelIDs['Probius']).send(message.author.mention+' Please call builds in this channel to avoid cluttering the other channels! <:bonk:761981366744121354>')
-						await guide(aliases(text[1]),message.guild.get_channel(DiscordChannelIDs['Probius']))
-						continue
-				await guide(aliases(text[1]),message.channel)
-			else:
 				await message.channel.send("Elitesparkle's builds: <https://elitesparkle.wixsite.com/hots-builds>")
 			continue
 		if command in rotationAlises:
