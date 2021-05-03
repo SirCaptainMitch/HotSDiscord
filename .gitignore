@@ -1,5 +1,6 @@
 .vscode/settings.json
 doStuff.py
+config/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
