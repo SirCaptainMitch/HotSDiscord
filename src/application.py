@@ -12,13 +12,13 @@ from discord.ext import commands
 from aliases import *
 from printFunctions import *
 from heroesTalents import *
-from emojis import *
 from miscFunctions import *
-from getDiscordToken import *
+from functions.getDiscordToken import getDiscordToken
+from functions.emojis import emoji
+from functions.draft import draft
 from builds import *
 from rotation import *
 from quotes import *
-from draft import *
 from reddit import *
 from sorting import *
 from patchNotes import *
@@ -598,4 +598,5 @@ intents.members = True  # Subscribe to the Members intent
 
 asyncio.set_event_loop(asyncio.new_event_loop())
 client = MyClient(command_prefix='!', intents=intents)
-client.run(getProbiusToken())
+# print(g.getDiscordToken())
+client.run(getDiscordToken())

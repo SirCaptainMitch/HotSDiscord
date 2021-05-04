@@ -1,7 +1,7 @@
 from aliases import *
 from printFunctions import *
 from maps import *
-from emojis import emoji
+from functions.emojis import emoji
 import asyncio
 import discord
 
