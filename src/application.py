@@ -9,7 +9,7 @@ from sys import argv
 from discord.ext import tasks
 from discord.ext import commands
 
-from classLib.client import Client
+from models.client import Client
 from functions.getDiscordToken import getDiscordToken
 
 # Outside of client so it doesn't reset on periodic restarts or [restart]

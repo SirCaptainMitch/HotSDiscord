@@ -15,20 +15,6 @@ from functions.main import *
 from functions.heroesTalents import *
 from functions.maps import * 
 
-# from functions.aliases import *
-# from functions.printFunctions import *
-
-# from miscFunctions import *
-
-# from functions.emojis import emoji
-
-# from builds import *
-# from rotation import *
-# from quotes import *
-# from patchNotes import *
-# from lfg import *
-# from maps import *
-
 
 class Client(discord.Client):
     def __init__(self, *args, **kwargs):
