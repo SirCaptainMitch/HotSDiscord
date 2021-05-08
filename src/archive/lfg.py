@@ -1,5 +1,5 @@
-from printFunctions import printLarge
-from discordIDs import *
+from functions.printFunctions import printLarge
+from data.discordIDs import *
 
 def roleAliases(role):
 	role='grandmaster' if role=='gm' else role

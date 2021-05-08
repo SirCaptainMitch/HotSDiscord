@@ -1,6 +1,6 @@
-from printFunctions import *
+from functions.printFunctions import *
 from urllib.request import urlopen
-from aliases import *
+from functions.aliases import *
 from itertools import repeat
 from json import loads
 import asyncio

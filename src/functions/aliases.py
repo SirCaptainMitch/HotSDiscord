@@ -137,7 +137,7 @@ def aliases(hero):
 	elif hero in ["zj",'zuljin','troll','luljin']:
 		return "Zul'jin"
 		
-	from printFunctions import getHeroes
+	from functions.printFunctions import getHeroes
 	for i in getHeroes():#Substring
 		if hero in aliasTrim(i):
 			return i

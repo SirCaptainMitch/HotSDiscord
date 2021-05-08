@@ -1,8 +1,8 @@
 import asyncio
 import aiohttp
-from rotation import *
-from printFunctions import printLarge
-from discordIDs import *
+from functions.rotation import *
+from functions.printFunctions import printLarge
+from data.discordIDs import *
 
 redditors=['Asddsa76', 'Blackstar_9', 'Spazzo965', 'SomeoneNew666', 'joshguillen', 'SotheBee', 'AnemoneMeer', 'Pscythic', 'Elitesparkle', 'slapperoni', 
 'secret3332', 'Carrygan_', 'Archlichofthestorm', 'Gnueless', 'ThatDoomedStudent', 'InfiniteEarth', 'SamiSha_', 'twinklesunnysun', 'Pelaberus', 'KillMeWithMemes',

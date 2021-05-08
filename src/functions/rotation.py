@@ -1,6 +1,6 @@
 from urllib.request import urlopen
 from json import loads
-from printFunctions import *
+from functions.printFunctions import *
 
 async def rotation(channel):
 	async with channel.typing():

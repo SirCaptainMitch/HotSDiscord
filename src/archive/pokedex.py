@@ -1,6 +1,6 @@
-from printFunctions import *
-from aliases import *
-from discordIDs import *
+from functions.printFunctions import *
+from functions.aliases import *
+from data.discordIDs import *
 
 async def fillPokedex(client):#Fills internal state with pokedex members
 	pokedexChannel=client.get_channel(DiscordChannelIDs['Pokedex'])

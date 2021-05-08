@@ -1,4 +1,4 @@
-from discordIDs import *
+from data.discordIDs import *
 
 def helpMessage():
 	output="""[Hero] to see that hero's abilities.

@@ -2,7 +2,7 @@ from urllib.request import urlopen
 from urllib.request import urlretrieve
 from bs4 import BeautifulSoup
 import re
-from aliases import * #Spellcheck and alternate names for heroes
+from functions.aliases import * #Spellcheck and alternate names for heroes
 import discord
 import io
 import aiohttp
