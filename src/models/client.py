@@ -13,7 +13,11 @@ from functions.reddit import *
 from functions.findTexts import *
 from functions.main import *
 from functions.heroesTalents import *
-from functions.maps import * 
+from functions.maps import *
+from data.discordIDs import *
+
+
+# https://realpython.com/how-to-make-a-discord-bot-python/
 
 
 class Client(discord.Client):

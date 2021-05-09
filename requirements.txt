@@ -6,3 +6,5 @@ requests
 Pillow
 sqlalchemy
 business-rule-engine
+pyodbc
+python-dotenv

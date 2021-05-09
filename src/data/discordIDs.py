@@ -10,6 +10,9 @@ DiscordUserIDs={
     'Derenash':191410663292272640,
     'MBee':364041091693150208,
     'Weebatsu':408114527947980802,
+    'Asddsa':183240974347141120,
+    'MindHawk':129702871837966336,
+    'SomeoneNew':247677408386351105,
 }
 
 ProbiusPrivilegesIDs=[DiscordUserIDs['TheCaptain']]
