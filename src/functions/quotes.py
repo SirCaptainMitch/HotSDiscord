@@ -1,6 +1,6 @@
 from urllib.request import urlopen
-from aliases import *
-from printFunctions import getHeroes
+from functions.aliases import *
+from functions.printFunctions import getHeroes
 
 def getQuote(hero):
 	with open(r'./heroConfig/quotes.txt','r') as f:

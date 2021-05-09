@@ -1,9 +1,11 @@
-from aliases import *
-from printFunctions import *
-from maps import *
-from emojis import emoji
 import asyncio
 import discord
+
+from functions.aliases import *
+from functions.printFunctions import *
+from functions.maps import * 
+from functions.emojis import emoji
+
 
 banEmojis={'Ana':'🍌',
 'Samuro':'<:banned:557364849940758528>',

@@ -61,3 +61,4 @@ async def coreAbilities(channel,battleground):
 	page=page.split('Recast after <b>')[1]
 	cooldown=page.split(' sec')[0]
 	await channel.send('``'+await mapString(battleground)+'`` **Core Ability - '+coreAbilityName+':** Every '+cooldown+' seconds, the Core '+coreDescription)
+  

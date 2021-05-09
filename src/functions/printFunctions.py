@@ -1,7 +1,7 @@
-from aliases import *
+from functions.aliases import *
 import asyncio
 import re
-from discordIDs import *
+from data.discordIDs import *
 
 allHeroes={
 	'bruiser':['Artanis', 'Chen', 'D.Va', 'Deathwing', 'Dehaka', 'Gazlowe', 'Hogger','Imperius', 'Leoric', 'Malthael', 'Ragnaros', 'Rexxar', 'Sonya', 'Thrall', 'Varian', 'Xul', 'Yrel'],
@@ -131,20 +131,17 @@ async def printLarge(channel,inputstring,separator='\n'):#Get long string. Print
 	await channel.send(output)
 
 async def printAll(client,message,keyword, deep=False, heroList=getHeroes()):#When someone calls [all/keyword]
-	'''if len(keyword)<4 and message.author.id!=DiscordUserIDs['Asddsa']:
-		await message.channel.send('Please use a keyword with at least 4 letters minimum')
-		return'''
 	toPrint=''
 	for hero in heroList:
 		(abilities,talents)=client.heroPages[hero]
-		output=await printSearch(abilities,talents,keyword,hero,deep)
+		output = await printSearch(abilities,talents,keyword,hero,deep)
 		if output=='':
 			continue
 		toPrint+='`'+hero.replace('_',' ')+':` '+output
 	if toPrint=='':
 		return
 	botChannels={'Wind Striders':DiscordChannelIDs['Probius'],'De Schuifpui Schavuiten':687351660502057021, 'Nexus Schoolhouse':813507461427363870}
-	if len(toPrint)>2000 and message.channel.guild.name in botChannels:#If the results is over one message, it gets dumped in specified bot channel
+	if len(toPrint)>2000 and message.channel.guild.name in botChannels:
 		channel=message.channel.guild.get_channel(botChannels[message.channel.guild.name])
 		introText=message.author.mention+", Here's all heroes' "+'"'+keyword+'":\n'
 		toPrint=introText+toPrint

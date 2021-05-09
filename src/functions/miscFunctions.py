@@ -1,4 +1,4 @@
-from discordIDs import *
+from data.discordIDs import *
 
 def helpMessage():
 	output="""[Hero] to see that hero's abilities.
@@ -45,22 +45,22 @@ async def vote(message,text):
 		await message.add_reaction('\U0001f44d')
 		await message.add_reaction('\U0001f44e')
 
-async def deleteMessages(author,ping,client):
-	guild=client.get_guild(DiscordGuildIDs['WindStriders'])#Wind Striders
-	if DiscordRoleIDs['Olympian'] not in [role.id for role in author.roles]:
-		return
+# async def deleteMessages(author,ping,client):
+# 	guild=client.get_guild(DiscordGuildIDs['WindStriders'])#Wind Striders
+# 	if DiscordRoleIDs['Olympian'] not in [role.id for role in author.roles]:
+# 		return
 		
-	userId=int(ping.replace(' ','').replace('!','')[2:-1])
-	deletedCount=0
-	for channel in guild.text_channels:
-		try:
-			async for message in channel.history(limit=20):
-				if message.author.id==userId:
-					await message.delete()
-					deletedCount+=1
-		except:
-			pass
-	await guild.get_channel(DiscordChannelIDs['Pepega']).send('Deleted '+str(deletedCount)+' messages from '+ping)
+# 	userId=int(ping.replace(' ','').replace('!','')[2:-1])
+# 	deletedCount=0
+# 	for channel in guild.text_channels:
+# 		try:
+# 			async for message in channel.history(limit=20):
+# 				if message.author.id==userId:
+# 					await message.delete()
+# 					deletedCount+=1
+# 		except:
+# 			pass
+# 	await guild.get_channel(DiscordChannelIDs['Pepega']).send('Deleted '+str(deletedCount)+' messages from '+ping)
 
 async def removeEmbeds(message):#Some embeds are instant, others are edited in by discord. Call in both on_message and on_message_edit
 	if message.embeds:

@@ -1,7 +1,7 @@
 import asyncio
 import aiohttp
-from aliases import *
-from printFunctions import *
+from functions.aliases import *
+from functions.printFunctions import *
 
 async def fetch(session, url):
 	async with session.get(url) as response:

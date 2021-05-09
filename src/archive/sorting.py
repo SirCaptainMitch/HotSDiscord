@@ -1,4 +1,4 @@
-from discordIDs import *
+from data.discordIDs import *
 from lfg import roleAliases
 
 async def trim(text):

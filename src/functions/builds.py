@@ -1,6 +1,6 @@
 from urllib.request import urlopen
-from printFunctions import getHeroes
-from aliases import aliases
+from functions.printFunctions import getHeroes
+from functions.aliases import aliases
 
 async def trimForIcyVeinsAndPsionicStorm(hero):
 	return hero.lower().replace('_','-').replace('.','').replace("'","").replace('ú','u').replace(' ','-')

@@ -1,6 +1,6 @@
 from urllib.request import urlopen
 from json import loads
-from printFunctions import *
+from functions.printFunctions import *
 
 async def rotation(channel):
 	async with channel.typing():
@@ -32,7 +32,7 @@ async def rotation(channel):
 			output+=', '.join(rotationHeroes[:7])+'\n'
 			output+=', '.join(rotationHeroes[7:])+'\n'
 			output+='**Sales '+str(data['Sale']['StartDate'])+' to '+str(data['Sale']['EndDate']+':**\n')
-			output+='**Sales:** '+', '.join([salesHeroes[i]+' '+gemPrices[i]+'<:nexusGem:697309829051449424>' for i in range(len(salesHeroes))])+'\n'
+			output+='**Sales:** '+', '.join([salesHeroes[i]+' '+gemPrices[i]+'<:gem:>' for i in range(len(salesHeroes))])+'\n'
 		if limitedHeroSkins:
 			output+='**'+skinsLimited+'Hero Skins:** \n '+'\n '.join(limitedHeroSkins)+'\n'
 		if limitedMounts:
