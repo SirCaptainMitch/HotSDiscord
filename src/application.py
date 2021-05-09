@@ -12,13 +12,6 @@ from discord.ext import commands
 from models.client import Client
 from functions.getDiscordToken import getDiscordToken
 
-# Outside of client so it doesn't reset on periodic restarts or [restart]
-
-# TODO:
-# add debug mode arg for printing logging messages
-# add log file for logging exceptions / debugs
-###
-
 # char=[[247677408386351105,'<:GoToChar:793111041046609951>',time.time()],[129702871837966336,'<:tww2:793399028611285022>',time.time()]]#[ID, emoji, time]
 char = []
 

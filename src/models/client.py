@@ -165,12 +165,3 @@ class Client(discord.Client):
                 await redditForwarding(self)
             except:
                 pass
-
-    # async def on_member_update(self, before, after):
-    #     if after.guild.id == DiscordGuildIDs['WindStriders']:
-    #         core = after.guild.get_role(DiscordRoleIDs['CoreMember'])
-    #         olympian = after.guild.get_role(DiscordRoleIDs['Olympian'])
-    #         if core in after.roles and core not in before.roles:
-    #             await self.get_channel(DiscordChannelIDs['SecretCabal']).send('Welcome '+after.mention+'!')
-    #         if olympian in after.roles and olympian not in before.roles:
-    #             await self.get_channel(DiscordChannelIDs['Pepega']).send('Welcome '+after.mention+'!')

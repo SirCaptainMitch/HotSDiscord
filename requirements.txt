@@ -4,3 +4,5 @@ nest_asyncio
 bs4
 requests
 Pillow
+sqlalchemy
+business-rule-engine

@@ -106,10 +106,10 @@ async def main(client, message, texts):
 						print(16)
 						await lfg(message.channel, text[1], client)
 						continue
-				if command in deleteAliases:
-						print(17)
-						await deleteMessages(message.author, text[1], client)
-						continue
+				# if command in deleteAliases:
+				# 		print(17)
+				# 		await deleteMessages(message.author, text[1], client)
+				# 		continue
 				if command in patchNotesAliases:
 						print(18)
 						await patchNotes(message.channel, text)
