@@ -1,0 +1,357 @@
+[
+  {
+    "hero": "Abathur",
+    "aliases": ["slug","snail","malarialarva"],
+    "abilityAliases": []
+  },
+  {
+    "hero": "Alarak",
+    "aliases": ["highlord","sith","sithlord","edgelord"],
+    "abilityAliases": []
+  },
+  {
+    "hero": "Alexstrasza",
+    "aliases": ["alexstrazsa","dragonmom","alextraza","alexstraza"],
+    "abilityAliases": []
+  },
+  {
+    "hero": "Ana",
+    "aliases": ["grandma"],
+    "abilityAliases": []
+  },
+  {
+    "hero": "Anduin",
+    "aliases": ["blondie","manduin","princess", "gif"],
+    "abilityAliases": []
+  },
+  {
+    "hero": "Anub'arak",
+    "aliases": ["beetle","anubarak","bug"],
+    "abilityAliases": []
+  },
+  {
+    "hero": "Artanis",
+    "aliases": ["zealot"],
+    "abilityAliases": []
+  },
+  {
+    "hero": "Arthas",
+    "aliases": ["lichking","lk"],
+    "abilityAliases": []
+  },
+  {
+    "hero": "Azmodan",
+    "aliases": ["dunklord","azmodunk"],
+    "abilityAliases": []
+  },
+  {
+    "hero": "Blaze",
+    "aliases": ["firebat"],
+    "abilityAliases": []
+  },
+  {
+    "hero": "Brightwing",
+    "aliases": ["bw","faeriedragon"],
+    "abilityAliases": []
+  },
+  {
+    "hero": "Deckard",
+    "aliases": ["cain","deckardcain"],
+    "abilityAliases": []
+  },
+  {
+    "hero": "Cassia",
+    "aliases": ["amazon"],
+    "abilityAliases": []
+  },
+  {
+    "hero": "Chromie",
+    "aliases": ["sandgnome","sandhitler"],
+    "abilityAliases": []
+  },
+  {
+    "hero": "Dehaka",
+    "aliases": ["yoshi"],
+    "abilityAliases": []
+  },
+  {
+    "hero": "Diablo",
+    "aliases": ["dibbles"],
+    "abilityAliases": []
+  },
+  {
+    "hero": "Deathwing",
+    "aliases": ["dw","destroyer","neltharion"],
+    "abilityAliases": []
+  },
+  {
+    "hero": "D.Va",
+    "aliases": ["dva","gremlin", "mech", "pilot"],
+    "abilityAliases": []
+  },
+  {
+    "hero": "E.T.C.",
+    "aliases": ["etc","cow"],
+    "abilityAliases": []
+  },
+  {
+    "hero": "Falstad",
+    "aliases": ["bird","falsedad"],
+    "abilityAliases": []
+  },
+  {
+    "hero": "Garrosh",
+    "aliases": ["garry","hellscream"],
+    "abilityAliases": []
+  },
+  {
+    "hero": "Gazlowe",
+    "aliases": ["gazlord","gazlove"],
+    "abilityAliases": []
+  },
+  {
+    "hero": "Greymane",
+    "aliases": ["graymane","gm", "dog"],
+    "abilityAliases": []
+  },
+  {
+    "hero": "Greymane",
+    "aliases": ["graymane","gm", "dog"],
+    "abilityAliases": []
+  },
+  {
+    "hero": "Genji",
+    "aliases": ["besthero","lowestwinrate","madamada","weaboo","ineedhealing","weeb"],
+    "abilityAliases": []
+  },
+  {
+    "hero": "Cho",
+    "aliases": ["cg","chogall"],
+    "abilityAliases": []
+  },
+  {
+    "hero": "Gul'dan",
+    "aliases": ["guldan","gd","ghouldan","daniel","warlock","guldangerous"],
+    "abilityAliases": []
+  },
+  {
+    "hero": "Hanzo",
+    "aliases": ["bowgenji", "handsoap"],
+    "abilityAliases": []
+  },
+  {
+    "hero": "Illidan",
+    "aliases": ["ilidan","illidumb", "dancingqueen"],
+    "abilityAliases": []
+  },
+  {
+    "hero": "Jaina",
+    "aliases": ["dreadlord", "maintank"],
+    "abilityAliases": []
+  },
+  {
+    "hero": "Johanna",
+    "aliases": ["jojo", "johnna", "pants", "crusader"],
+    "abilityAliases": []
+  },
+  {
+    "hero": "Junkrat",
+    "aliases": ["jr"],
+    "abilityAliases": []
+  },
+  {
+    "hero": "Kael'thas",
+    "aliases": ["kt","kaelthas"],
+    "abilityAliases": []
+  },
+  {
+    "hero": "Kel'Thuzad",
+    "aliases": ["ktz","kelthuzad","lich"],
+    "abilityAliases": []
+  },
+  {
+    "hero": "Kerrigan",
+    "aliases": ["sarah"],
+    "abilityAliases": []
+  },
+  {
+    "hero": "Kharazim",
+    "aliases": ["karazhim","monk","karazim", "kara"],
+    "abilityAliases": []
+  },
+  {
+    "hero": "Leoric",
+    "aliases": ["janitor"],
+    "abilityAliases": []
+  },
+  {
+    "hero": "Li_Li",
+    "aliases": ["lili","li-li"],
+    "abilityAliases": []
+  },
+  {
+    "hero": "Li-Ming",
+    "aliases": ["lm","liming","wizard","captain", "cap"],
+    "abilityAliases": []
+  },
+  {
+    "hero": "Lt._Morales",
+    "aliases": ["medic","ltmorales"],
+    "abilityAliases": []
+  },
+  {
+    "hero": "Lúcio",
+    "aliases": ["dj","lucio"],
+    "abilityAliases": []
+  },
+  {
+    "hero": "Lunara",
+    "aliases": ["deer","bambi","33elk","lulnara"],
+    "abilityAliases": []
+  },
+  {
+    "hero": "Mal'Ganis",
+    "aliases": ["malganis","mg","turtle"],
+    "abilityAliases": []
+  },
+  {
+    "hero": "Medivh",
+    "aliases": ["medihv","raven","memedivh"],
+    "abilityAliases": []
+  },
+  {
+    "hero": "Mei",
+    "aliases": ["mai","may","mey", "dankmaymays"],
+    "abilityAliases": []
+  },
+  {
+    "hero": "Murky",
+    "aliases": ["fish","murloc"],
+    "abilityAliases": []
+  },
+  {
+    "hero": "Nazeebo",
+    "aliases": ["witchdoctor","brap","aieee"],
+    "abilityAliases": []
+  },
+  {
+    "hero": "Orphea",
+    "aliases": ["voreloli","nexusoc"],
+    "abilityAliases": []
+  },
+  {
+    "hero": "Probius",
+    "aliases": ["probe"],
+    "abilityAliases": []
+  },
+  {
+    "hero": "Raynor",
+    "aliases": ["jimmy"],
+    "abilityAliases": []
+  },
+  {
+    "hero": "Ragnaros",
+    "aliases": ["firelord"],
+    "abilityAliases": []
+  },
+  {
+    "hero": "Rehgar",
+    "aliases": ["reghar","rhegar", "wolf"],
+    "abilityAliases": []
+  },
+  {
+    "hero": "Rexxar",
+    "aliases": ["misha"],
+    "abilityAliases": []
+  },
+  {
+    "hero": "Samuro",
+    "aliases": ["worsthero","uselesshero","grandpa","blademaster"],
+    "abilityAliases": []
+  },
+  {
+    "hero": "Sgt._Hammer",
+    "aliases": ["sgthammer"],
+    "abilityAliases": []
+  },
+  {
+    "hero": "Sonya",
+    "aliases": ["barbarian", "ooahhh"],
+    "abilityAliases": []
+  },
+  {
+    "hero": "Stitches",
+    "aliases": ["stiches","stitces","fatty", "lardlad", "nomebus"],
+    "abilityAliases": []
+  },
+  {
+    "hero": "Sylvanas",
+    "aliases": ["sylvannas"],
+    "abilityAliases": []
+  },
+  {
+    "hero": "Tassadar",
+    "aliases": ["executor","templar"],
+    "abilityAliases": []
+  },
+  {
+    "hero": "The_Butcher",
+    "aliases": ["thebutcher"],
+    "abilityAliases": []
+  },
+  {
+    "hero": "The_Lost_Vikings",
+    "aliases": ["tlv","thelostvikings","lostvikings"],
+    "abilityAliases": []
+  },
+  {
+    "hero": "Tracer",
+    "aliases": ["lena","oxton","lenaoxton","mosquito"],
+    "abilityAliases": []
+  },
+  {
+    "hero": "Tyrael",
+    "aliases": ["tyrone","tyreal"],
+    "abilityAliases": []
+  },
+  {
+    "hero": "Valla",
+    "aliases": ["demonhunter","vala"],
+    "abilityAliases": []
+  },
+  {
+    "hero": "Whitemane",
+    "aliases": ["wm", "thighmane"],
+    "abilityAliases": []
+  },
+  {
+    "hero": "Xul",
+    "aliases": ["necromancer", "bonedaddy"],
+    "abilityAliases": []
+  },
+  {
+    "hero": "Yrel",
+    "aliases": ["goat","spacegoat"],
+    "abilityAliases": []
+  },
+  {
+    "hero": "Zarya",
+    "aliases": ["russian"],
+    "abilityAliases": []
+  },
+  {
+    "hero": "Zeratul",
+    "aliases": ["zerathul", "zera"],
+    "abilityAliases": []
+  },
+  {
+    "hero": "Zul'jin",
+    "aliases": ["zj","zuljin","troll","luljin"],
+    "abilityAliases": []
+  },
+  {
+    "hero": "Zagara",
+    "aliases": ["zerg"],
+    "abilityAliases": []
+  }
+]

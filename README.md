@@ -1,45 +1,46 @@
 # Probius
 
-This is a forked version of the Nexus School House HotS Discord bot. It is being re-worked to be server agnostic, containerized ,and easily configurable.
-
-Call in Discord with [hero/modifier], where modifier is hotkey or talent tier. Data is pulled from HotS wiki. 
-
-Written in Python 3.5.3
-
-# Installation and Setup
-
-The discord bot should be run in a Virtual Environment ( venv ) to prevent collisions on a local machine or server. 
-
-1. Setup the Viirtual Environment
-    > python -m venv venv
-1. Install the required modules 
-    > python -m pip install -r requirements.txt 
-1. Run the main bot function. 
-    > python ./src/application.py
-
-
+A HotS Discord bot. Call in Discord with [hero/modifier], where modifier is hotkey or talent tier. Data is pulled from HotS wiki. 
 
 # File description
 
-probius: The main file that calls all the other files
+1. **application**: The main file that calls all the other files
+1. **aliases**: Spellcheck and alternate names for heroes
+1. **trimBrackets**: Trims < from text
+1. **printFunctions**: The functions that output the things to print
+1. **heroPage**: The function that imports the hero pages
+1. **emojis**: Emojis
+1. **miscFunctions**: Edge cases and help message
+1. **elitesparkleGuide**: Hero guides
+1. **downloadHero**: Downloads a hero page. Not called by main loop, must be run after each patch.
 
-aliases: Spellcheck and alternate names for heroes
+# Config Files 
 
-trimBrackets: Trims < from text
+## .env 
 
-printFunctions: The functions that output the things to print
+This is an environmental file that hold the dicord token, instead of storing it in a file that gets added to the repo. 
 
-heroPage: The function that imports the hero pages
+1. in the parent directory, create a file called `.env`.
+2. Inside this file add these lines. 
+`# .env
+DISCORD_TOKEN={Your_Token_No_Brackets}`
 
-emojis: Emojis
 
-miscFunctions: Edge cases and help message
+# Directory Structure
 
-getDiscordToken: The token is in an untracked file because this is a public Github repo
+The main app is stored in the 'app' directory. 
 
-elitesparkleGuide: Hero guides
-
-downloadHero: Downloads a hero page. Not called by main loop, must be run after each patch.
-
-Example usage:
-![bilde](https://user-images.githubusercontent.com/49531523/109698466-b7da2a00-7b8f-11eb-8b5a-d20a3daf22a3.png)
+```
+.
+.
+└── probius/
+    ├── app/
+    │   ├── data
+    │   ├── functions
+    │   ├── models
+    │   └── application.py
+    ├── builds
+    ├── emojis
+    ├── heroConfig
+    └── maps
+```    
