@@ -8,3 +8,5 @@ sqlalchemy
 business-rule-engine
 pyodbc
 python-dotenv
+pandas
+tabulate

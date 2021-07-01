@@ -7,6 +7,7 @@ from app.functions.findTexts import *
 from app.functions.main import *
 from app.functions.heroesTalents import *
 from app.functions.maps import *
+from app.functions.roster import * 
 from app.functions.patchNotes import *
 from app.data.discordIDs import *
 
@@ -27,6 +28,8 @@ class Client(discord.Client):
         self.ready = False  # Wait until ready before taking commands
         self.rulesChannel = None
         self.welcomeMessage = ''
+        self.rosterPath = './app/data/roster.json'
+        self.playersPath = './app/data/players.json'
 
     async def on_ready(self):
         print('Logged on...')
@@ -35,6 +38,8 @@ class Client(discord.Client):
         self.seenTitles = await fillPreviousPostTitles(self)
         print('Downloading heroes...')
         await downloadAll(self, argv)
+        print('loading roster data...')
+        # load_roster(self.playersPath, self.rosterPath)
         self.ready = True
         print('Ready!')
         # self.rulesChannel=self.get_channel(DiscordChannelIDs['ServerRules'])#server-rules
@@ -87,8 +92,8 @@ class Client(discord.Client):
                 return
             newMentions = [i for i in findMentions(
                 after) if i not in findMentions(before)]
-            if newMentions:
-                await after.channel.send(', '.join(newMentions)+', '+after.author.display_name+' wants to ping you!')
+            # if newMentions:
+            #     await after.channel.send(', '.join(newMentions)+', '+after.author.display_name+' wants to ping you!')
 
     async def on_raw_reaction_add(self, payload):
         member = self.get_user(payload.user_id)
@@ -158,3 +163,4 @@ class Client(discord.Client):
                 await redditForwarding(self)
             except:
                 pass
+

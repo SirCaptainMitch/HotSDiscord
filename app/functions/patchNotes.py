@@ -54,3 +54,5 @@ async def patchNotes(channel,text):
 				output=output.strip()+'*'
 
 			await printLarge(channel,output)
+
+      

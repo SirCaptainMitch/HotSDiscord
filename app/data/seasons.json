@@ -1,0 +1,135 @@
+[
+    {
+        "EndDate": "2016-09-13",
+        "Season": "2016-season-1",
+        "StartDate": "2016-06-14",
+        "TimeSpan": "13 weeks",
+        "Url": "<https://nexuscompendium.com/ranked/2016-season-1>"
+    },
+    {
+        "EndDate": "2016-12-14",
+        "Season": "2016-season-2",
+        "StartDate": "2016-09-13",
+        "TimeSpan": "13 weeks",
+        "Url": "<https://nexuscompendium.com/ranked/2016-season-2>"
+    },
+    {
+        "EndDate": "2017-03-14",
+        "Season": "2016-season-3",
+        "StartDate": "2016-12-14",
+        "TimeSpan": "13 weeks",
+        "Url": "<https://nexuscompendium.com/ranked/2016-season-3>"
+    },
+    {
+        "EndDate": "2017-06-13",
+        "Season": "2017-season-1",
+        "StartDate": "2017-03-14",
+        "TimeSpan": "13 weeks",
+        "Url": "<https://nexuscompendium.com/ranked/2017-season-1>"
+    },
+    {
+        "EndDate": "2017-09-05",
+        "Season": "2017-season-2",
+        "StartDate": "2017-06-13",
+        "TimeSpan": "12 weeks",
+        "Url": "<https://nexuscompendium.com/ranked/2017-season-2>"
+    },
+    {
+        "EndDate": "2017-12-12",
+        "Season": "2017-season-3",
+        "StartDate": "2017-09-05",
+        "TimeSpan": "14 weeks",
+        "Url": "<https://nexuscompendium.com/ranked/2017-season-3>"
+    },
+    {
+        "EndDate": "2018-03-06",
+        "Season": "2018-season-1",
+        "StartDate": "2017-12-12",
+        "TimeSpan": "12 weeks",
+        "Url": "<https://nexuscompendium.com/ranked/2018-season-1>"
+    },
+    {
+        "EndDate": "2018-07-10",
+        "Season": "2018-season-2",
+        "StartDate": "2018-03-06",
+        "TimeSpan": "18 weeks",
+        "Url": "<https://nexuscompendium.com/ranked/2018-season-2>"
+    },
+    {
+        "EndDate": "2018-09-25",
+        "Season": "2018-season-3",
+        "StartDate": "2018-07-10",
+        "TimeSpan": "11 weeks",
+        "Url": "<https://nexuscompendium.com/ranked/2018-season-3>"
+    },
+    {
+        "EndDate": "2018-12-11",
+        "Season": "2018-season-4",
+        "StartDate": "2018-09-25",
+        "TimeSpan": "11 weeks",
+        "Url": "<https://nexuscompendium.com/ranked/2018-season-4>"
+    },
+    {
+        "EndDate": "2019-03-26",
+        "Season": "2019-season-1",
+        "StartDate": "2018-12-11",
+        "TimeSpan": "15 weeks",
+        "Url": "<https://nexuscompendium.com/ranked/2019-season-1>"
+    },
+    {
+        "EndDate": "2019-08-06",
+        "Season": "2019-season-2",
+        "StartDate": "2019-03-26",
+        "TimeSpan": "19 weeks",
+        "Url": "<https://nexuscompendium.com/ranked/2019-season-2>"
+    },
+    {
+        "EndDate": "2019-12-03",
+        "Season": "2019-season-3",
+        "StartDate": "2019-08-06",
+        "TimeSpan": "17 weeks",
+        "Url": "<https://nexuscompendium.com/ranked/2019-season-3>"
+    },
+    {
+        "EndDate": "2020-04-14",
+        "Season": "2020-season-1",
+        "StartDate": "2019-12-03",
+        "TimeSpan": "19 weeks",
+        "Url": "<https://nexuscompendium.com/ranked/2020-season-1>"
+    },
+    {
+        "EndDate": "2020-06-23",
+        "Season": "2020-season-2",
+        "StartDate": "2020-04-14",
+        "TimeSpan": "10 weeks",
+        "Url": "<https://nexuscompendium.com/ranked/2020-season-2>"
+    },
+    {
+        "EndDate": "2020-09-08",
+        "Season": "2020-season-3",
+        "StartDate": "2020-06-23",
+        "TimeSpan": "11 weeks",
+        "Url": "<https://nexuscompendium.com/ranked/2020-season-3>"
+    },
+    {
+        "EndDate": "2020-12-01",
+        "Season": "2020-season-4",
+        "StartDate": "2020-09-08",
+        "TimeSpan": "12 weeks",
+        "Url": "<https://nexuscompendium.com/ranked/2020-season-4>"
+    },
+    {
+        "EndDate": "2021-05-18",
+        "Season": "2021-season-1",
+        "StartDate": "2020-12-01",
+        "TimeSpan": "24 weeks",
+        "Url": "<https://nexuscompendium.com/ranked/2021-season-1>"
+    },
+    {
+        "EndDate": "2021-09-28",
+        "Season": "2021-season-2",
+        "StartDate": "2021-05-18",
+        "TimeSpan": "19 weeks",
+        "Url": "<https://nexuscompendium.com/ranked/2021-season-2>"
+    }
+]
