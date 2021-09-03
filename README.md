@@ -44,3 +44,12 @@ The main app is stored in the 'app' directory.
     ├── heroConfig
     └── maps
 ```    
+
+## Install
+
+On linux 
+
+> sudo apt-get install python3-venv 
+> sudo apt-get install python3-pip
+> sudo apt-get install unixodbc unixodbc-dev 
+
