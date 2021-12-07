@@ -32,7 +32,7 @@ DiscordGuildIDs={
 }
 
 DiscordChannelIDs={
-    'LoggingChannel':836745981722361887,
+    'LoggingChannel':915602632075272192,
     'RedditPosts':837656948798783538,
     'General':828616929472282648,
     'ServerRules':837657038250835978,

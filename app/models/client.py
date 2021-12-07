@@ -38,7 +38,7 @@ class Client(discord.Client):
         self.seenTitles = await fillPreviousPostTitles(self)
         print('Downloading heroes...')
         await downloadAll(self, argv)
-        print('loading roster data...')
+        # print('loading roster data...')
         # load_roster(self.playersPath, self.rosterPath)
         self.ready = True
         print('Ready!')

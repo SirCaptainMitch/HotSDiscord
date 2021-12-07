@@ -1,5 +1,3 @@
-# application.py
-
 import asyncio
 import discord
 import os

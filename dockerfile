@@ -1,4 +1,4 @@
-FROM python:3
+FROM python:3.7
 COPY . /app
 WORKDIR /app
 # Update Ubuntu Software repository
@@ -28,7 +28,7 @@ WORKDIR /app
 
 # # update PATH after ODBC driver and tools are installed
 # ENV PATH="/opt/mssql-tools/bin:${PATH}"	
-EXPOSE 5001
+EXPOSE 50001
 RUN pip install -r requirements.txt 
 # CMD tail -f /dev/null
 ENTRYPOINT [ "python" ]
