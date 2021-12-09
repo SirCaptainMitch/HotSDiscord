@@ -1,7 +1,6 @@
 aiohttp
 discord
 nest_asyncio
-bs4
 requests
 Pillow
 sqlalchemy
@@ -10,3 +9,4 @@ pyodbc
 python-dotenv
 pandas
 tabulate
+bs4
