@@ -12,7 +12,9 @@ def helpMessage():
 Emojis: [:Hero/emotion], where emotion is of the following: happy, lol, sad, silly, meh, angry, cool, oops, love, or wow.
 Mock drafting: [draft/info].
 [battleground/X] and [core/X], where X is a battleground, for a map or a description of the core's abilities
-My public repository: <https://github.com/SirCaptainMitch/Probius>"""
+My public repository: <https://github.com/SirCaptainMitch/pylon.git>
+The main fork repository: <https://github.com/Asddsa76/Probius>
+"""
 	return output
 
 async def roll(text,message):
