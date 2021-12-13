@@ -1,0 +1,21 @@
+#Ignore the logs directory
+logs/
+
+#Ignoring ide and git directories
+.git
+.cache
+.vscode
+
+#ignore the env
+venv/
+dockerfiles/
+
+# Ignore the database
+*.db
+
+# Ignore markdown
+*.md
+
+# 300e1120-31cd-4ae9-9a0d-c213ed2ae94d
+# docker build . --tag cap-probe:latest
+# docker run --rm -it --network host cap-probe:latest --name cap-probe

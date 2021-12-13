@@ -1,0 +1,30 @@
+
+# SQL Server Command Line Tools
+FROM ubuntu:20.04
+ARG DEBIAN_FRONTEND=noninteractive
+
+# LABEL maintainer="SQL Server Engineering Team"
+RUN export TZ=America/Chicago
+
+
+# apt-get and system utilities
+RUN apt-get update
+RUN apt-get install tzdata
+RUN apt-get install -yq software-properties-common build-essential -f
+RUN add-apt-repository ppa:deadsnakes/ppa
+RUN apt-get update
+RUN apt-get install -y unixodbc-dev
+RUN apt-get install -y python3.7 python3-pip python3.7-dev
+RUN ln -s /usr/bin/python3.7 /usr/bin/python
+
+RUN apt-get install -y \
+	curl apt-transport-https debconf-utils \
+	gnupg2 \
+    && rm -rf /var/lib/apt/lists/*
+
+
+run python -m pip install -U pip
+run python -m pip install pyodbc
+
+
+CMD /bin/bash
