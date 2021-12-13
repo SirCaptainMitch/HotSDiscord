@@ -1,6 +1,8 @@
-# Probius
+# Pylon
 
 A HotS Discord bot. Call in Discord with [hero/modifier], where modifier is hotkey or talent tier. Data is pulled from HotS wiki. 
+
+This project was forked from https://github.com/Asddsa76/Probius , who did a fantastic amount of work that helped me learn more about discord bots.
 
 # File description
 
