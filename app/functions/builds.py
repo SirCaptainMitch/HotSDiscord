@@ -2,6 +2,9 @@ from urllib.request import urlopen
 from app.functions.printFunctions import getHeroes
 from app.functions.aliases import aliases
 
+build_base_path = r'./data/builds/'
+
+
 async def trimForIcyVeinsAndPsionicStorm(hero):
 	return hero.lower().replace('_','-').replace('.','').replace("'","").replace('ú','u').replace(' ','-')
 

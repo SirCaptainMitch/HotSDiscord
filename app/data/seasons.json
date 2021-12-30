@@ -126,10 +126,17 @@
         "Url": "<https://nexuscompendium.com/ranked/2021-season-1>"
     },
     {
-        "EndDate": "2021-09-28",
-        "Season": "2021-season-2",
-        "StartDate": "2021-05-18",
-        "TimeSpan": "19 weeks",
-        "Url": "<https://nexuscompendium.com/ranked/2021-season-2>"
-    }
+      "Season": "2021 Season 2",
+      "TimeSpan": "29 weeks",
+      "Url": "https://nexuscompendium.com/ranked/2021-season-2",
+      "StartDate": "2021-05-18 00:00:00",
+      "EndDate": "2021-12-07 00:00:00"
+  },
+  {
+      "Season": "2022 Season 1",
+      "TimeSpan": "28 weeks",
+      "Url": "https://nexuscompendium.com/ranked/2022-season-1",
+      "StartDate": "2021-12-07 00:00:00",
+      "EndDate": "2022-06-21 00:00:00"
+  }
 ]

@@ -1,0 +1,358 @@
+[
+ {
+   "hero": "Abathur",
+   "quote": "Logical decision."
+ },
+ {
+   "hero": "Alarak",
+   "quote": "Finally."
+ },
+ {
+   "hero": "Alexstrasza",
+   "quote": "I shall do what I must."
+ },
+ {
+   "hero": "Ana",
+   "quote": "Ana, checking in."
+ },
+ {
+   "hero": "Anduin",
+   "quote": "For the Alliance above all!"
+ },
+ {
+   "hero": "Anub'arak",
+   "quote": "For the Frozen Throne!"
+ },
+ {
+   "hero": "Artanis",
+   "quote": "Our time has come."
+ },
+ {
+   "hero": "Arthas",
+   "quote": "Frostmourne hungers."
+ },
+ {
+   "hero": "Auriel",
+   "quote": "There is always hope."
+ },
+ {
+   "hero": "Azmodan",
+   "quote": "So, it begins."
+ },
+ {
+   "hero": "Blaze",
+   "quote": "Need a light?"
+ },
+ {
+   "hero": "Brightwing",
+   "quote": "Fight time!"
+ },
+ {
+   "hero": "Cassia",
+   "quote": "The wait is over."
+ },
+ {
+   "hero": "Chen",
+   "quote": "I bring panda-monium!"
+ },
+ {
+   "hero": "Cho",
+   "quote": "The apocalypse has come!"
+ },
+ {
+   "hero": "Chromie",
+   "quote": "Here we go again!"
+ },
+ {
+   "hero": "Deathwing",
+   "quote": "The Nexus shall tremble."
+ },
+ {
+   "hero": "D.Va",
+   "quote": "I play to win!"
+ },
+ {
+   "hero": "Deckard",
+   "quote": "So, it begins."
+ },
+ {
+   "hero": "Dehaka",
+   "quote": "Change is upon us."
+ },
+ {
+   "hero": "Diablo",
+   "quote": "Tremble before me!"
+ },
+ {
+   "hero": "E.T.C.",
+   "quote": "I bring the mega-death!"
+ },
+ {
+   "hero": "Falstad",
+   "quote": "Let's fly!"
+ },
+ {
+   "hero": "Fenix",
+   "quote": "En Taro Adun!"
+ },
+ {
+   "hero": "Gall",
+   "quote": "Chaos comes!"
+ },
+ {
+   "hero": "Garrosh",
+   "quote": "Lok'tar ogar!"
+ },
+ {
+   "hero": "Gazlowe",
+   "quote": "Anyone order a one-man wreckin' crew?"
+ },
+ {
+   "hero": "Genji",
+   "quote": "Iza, jinjou ni shoubu!"
+ },
+ {
+   "hero": "Greymane",
+   "quote": "Gilneas will rise again!"
+ },
+ {
+   "hero": "Gul'dan",
+   "quote": "I will not be denied!"
+ },
+ {
+   "hero": "Hanzo",
+   "quote": "With every death comes honor.  With honor, redemption."
+ },
+ {
+   "hero": "Illidan",
+   "quote": "My hatred is unending."
+ },
+ {
+   "hero": "Imperius",
+   "quote": "I yearn for battle."
+ },
+ {
+   "hero": "Jaina",
+   "quote": "I'm here to help!"
+ },
+ {
+   "hero": "Johanna",
+   "quote": "The Crusade calls."
+ },
+ {
+   "hero": "Junkrat",
+   "quote": "It's a perfect day for some mayhem!"
+ },
+ {
+   "hero": "Kael'thas",
+   "quote": "Selama ashal'anore!"
+ },
+ {
+   "hero": "Kel'Thuzad",
+   "quote": "Obey the call!"
+ },
+ {
+   "hero": "Kerrigan",
+   "quote": "Wait 'til they get a load of me!"
+ },
+ {
+   "hero": "Kharazim",
+   "quote": "Ytar, guide my path!"
+ },
+ {
+   "hero": "Leoric",
+   "quote": "All shall suffer!"
+ },
+ {
+   "hero": "Li-Ming",
+   "quote": "This realm needs me."
+ },
+ {
+   "hero": "Li_Li",
+   "quote": "Ready for adventure!"
+ },
+ {
+   "hero": "Lt._Morales",
+   "quote": "Let's save some lives!"
+ },
+ {
+   "hero": "Lucio",
+   "quote": "Oh!  This is my jam!"
+ },
+ {
+   "hero": "Lunara",
+   "quote": "The hunt is on."
+ },
+ {
+   "hero": "Maiev",
+   "quote": "None shall flee my grasp!"
+ },
+ {
+   "hero": "Mal'Ganis",
+   "quote": "I must feed."
+ },
+ {
+   "hero": "Malfurion",
+   "quote": "Elune, grant us strength!"
+ },
+ {
+   "hero": "Malthael",
+   "quote": "Death is beyond your reach."
+ },
+ {
+   "hero": "Medivh",
+   "quote": "Let the games begin."
+ },
+ {
+   "hero": "Mei",
+   "quote": "Our world is worth fighting for."
+ },
+ {
+   "hero": "Mephisto",
+   "quote": "*(Hisses)*"
+ },
+ {
+   "hero": "Muradin",
+   "quote": "Ready for action!"
+ },
+ {
+   "hero": "Murky",
+   "quote": "Mrrgll"
+ },
+ {
+   "hero": "Nazeebo",
+   "quote": "I hear the call."
+ },
+ {
+   "hero": "Nova",
+   "quote": "Locked and loaded."
+ },
+ {
+   "hero": "Orphea",
+   "quote": "For the Nexus!"
+ },
+ {
+   "hero": "Probius",
+   "quote": "*(Probe sounds)*"
+ },
+ {
+   "hero": "Qhira",
+   "quote": "I'm in."
+ },
+ {
+   "hero": "Ragnaros",
+   "quote": "By fire, be purged!"
+ },
+ {
+   "hero": "Raynor",
+   "quote": "Anytime you're ready."
+ },
+ {
+   "hero": "Rehgar",
+   "quote": "I will fight to my last breath!"
+ },
+ {
+   "hero": "Rexxar",
+   "quote": "I hear the call of the wild."
+ },
+ {
+   "hero": "Samuro",
+   "quote": "I hear and obey."
+ },
+ {
+   "hero": "Sgt._Hammer",
+   "quote": "Ready to roll out!"
+ },
+ {
+   "hero": "Sonya",
+   "quote": "My blades are yours."
+ },
+ {
+   "hero": "Stitches",
+   "quote": "Stitches want to play!"
+ },
+ {
+   "hero": "Stukov",
+   "quote": "Victory above all!"
+ },
+ {
+   "hero": "Sylvanas",
+   "quote": "Victory for the Forsaken!"
+ },
+ {
+   "hero": "Tassadar",
+   "quote": "From order comes justice."
+ },
+ {
+   "hero": "The_Butcher",
+   "quote": "Fresh meat!"
+ },
+ {
+   "hero": "The_Lost_Vikings",
+   "quote": "Where will we end up this time?"
+ },
+ {
+   "hero": "Thrall",
+   "quote": "Glory to the Horde."
+ },
+ {
+   "hero": "Tracer",
+   "quote": "Cheers, love!  The cavalry's here!"
+ },
+ {
+   "hero": "Tychus",
+   "quote": "Hell, it's about damn time!"
+ },
+ {
+   "hero": "Tyrael",
+   "quote": "Reckoning is at hand."
+ },
+ {
+   "hero": "Tyrande",
+   "quote": "I heed the voice of Elune."
+ },
+ {
+   "hero": "Uther",
+   "quote": "The Light abandons no man."
+ },
+ {
+   "hero": "Valeera",
+   "quote": "Here we go."
+ },
+ {
+   "hero": "Valla",
+   "quote": "I stand ready."
+ },
+ {
+   "hero": "Varian",
+   "quote": "We will forge a great destiny!"
+ },
+ {
+   "hero": "Whitemane",
+   "quote": "Let the inquisition commence!"
+ },
+ {
+   "hero": "Xul",
+   "quote": "It is time."
+ },
+ {
+   "hero": "Yrel",
+   "quote": "Do your worst!"
+ },
+ {
+   "hero": "Zagara",
+   "quote": "The Swarm endures."
+ },
+ {
+   "hero": "Zarya",
+   "quote": "Zarya, ready for duty."
+ },
+ {
+   "hero": "Zeratul",
+   "quote": "I serve."
+ },
+ {
+   "hero": "Zul'jin",
+   "quote": "Make way for the bad guy!"
+ }
+]
