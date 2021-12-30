@@ -4,17 +4,11 @@ A HotS Discord bot. Call in Discord with [hero/modifier], where modifier is hotk
 
 This project was forked from https://github.com/Asddsa76/Probius , who did a fantastic amount of work that helped me learn more about discord bots.
 
-# File description
+# Running the app 
 
-1. **application**: The main file that calls all the other files
-1. **aliases**: Spellcheck and alternate names for heroes
-1. **trimBrackets**: Trims < from text
-1. **printFunctions**: The functions that output the things to print
-1. **heroPage**: The function that imports the hero pages
-1. **emojis**: Emojis
-1. **miscFunctions**: Edge cases and help message
-1. **elitesparkleGuide**: Hero guides
-1. **downloadHero**: Downloads a hero page. Not called by main loop, must be run after each patch.
+Once the env is configured and the enviornment has the modules installed you can just use `python3 application.py`
+
+If you want to run this via docker, see the docker section. 
 
 # Config Files 
 
@@ -62,3 +56,14 @@ OPEN_API_URL=https://api.heroesprofile.com/openApi
     ├── emojis
     └── maps
 ```
+
+# Docker 
+
+You don't *have* to run this in a container, you can run it directly from the terminal. 
+
+You can change the image name to whatever you want, this is mine `sircaptainmitch/cap-probe`. Tags can be used if you like, currently I only have `latest`.This will build and run the container locally. I push to my own dockerhub ,so I can deploy it to my homelab, but you can do w/e.
+
+1. `docker build ./dockerfiles/dockerfile --tag cap-base:latest`
+2. `docker build . --tag sircaptainmitch/cap-probe:latest`
+3. `docker run docker run sircaptainmitch/cap-probe:latest`
+4. `docker push sircaptainmitch/cap-probe:latest`
