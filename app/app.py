@@ -2,21 +2,21 @@ import asyncio
 import discord
 import os
 from dotenv import load_dotenv
-from sys import argv
+# from sys import argv
 
 # custom import
 from app.models.client import Client
-from app.db import create_database
-from app.models.user import User
+# from app.db import create_database
+# from app.models.user import User
 
 
 def run():
     load_dotenv()
 
-    session = create_database()
-    user = User('TheCaptain', '176118079942688770')
-
-    session.add(user)
+    # session = create_database()
+    # user = User('UserName', '{discord_id}')
+    #
+    # session.add(user)
 
     TOKEN = os.getenv('DISCORD_TOKEN')
 
@@ -28,6 +28,5 @@ def run():
     client.run(TOKEN)
 
 
-
-if __name__ == '__main__':    
+if __name__ == '__main__':
     run()

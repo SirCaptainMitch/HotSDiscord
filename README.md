@@ -20,20 +20,36 @@ This project was forked from https://github.com/Asddsa76/Probius , who did a fan
 
 ## .env 
 
-This is an environmental file that hold the dicord token, instead of storing it in a file that gets added to the repo. 
+This is an environmental file that hold the discord token, and other configs.
+For security reasons, this is not added to the repository. You will need to create your own. 
 
-1. in the parent directory, create a file called `.env`.
+1. In the parent directory, create a file called `.env`.
 2. Inside this file add these lines. 
-`# .env
-DISCORD_TOKEN={Your_Token_No_Brackets}`
+```
+# .env
+DISCORD_TOKEN={Your_Token_No_Brackets}
+HEROES_PROFILE_TOKEN=={Your_Token_No_Brackets}
+API_URL=https://api.heroesprofile.com/api
+OPEN_API_URL=https://api.heroesprofile.com/openApi
+```
 
 
 # Directory Structure
 
-The main app is stored in the 'app' directory. 
+1. The main app is stored in the `app` directory.
+3. `builds` currently contains the .txt files for the different hero build urls.
+4. `dockerfiles` contains the different docker files I used.
+   1. Planning for an rdbms in order to help make storing the data easier, hence `_sql` file 
+   2. `dockerfiles/dockerfile` will create a "base" image to use for python 3.7. 
+      1. This is a massive PITA, so thats why the base exists. 
+   3. `./dockerfile` is the main file you will build off once the base image exists.
+      1. Includes SQL Server tools you can comment this out if you wish.
+         1. Nothing uses it and the files were intended to be a template for my other project. 
+      2. This pulls the base image, and then runs the app. 
+5. 
 
 ```
-.
+
 .
 └── probius/
     ├── app/
@@ -42,16 +58,7 @@ The main app is stored in the 'app' directory.
     │   ├── models
     │   └── application.py
     ├── builds
+    ├── dockerfiles
     ├── emojis
-    ├── heroConfig
     └── maps
-```    
-
-## Install
-
-On linux 
-
-> sudo apt-get install python3-venv 
-> sudo apt-get install python3-pip
-> sudo apt-get install unixodbc unixodbc-dev 
-
+```
