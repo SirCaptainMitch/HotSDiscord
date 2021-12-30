@@ -2,7 +2,7 @@ from urllib.request import urlopen
 from app.functions.aliases import *
 from app.functions.printFunctions import getHeroes
 
-quotes_path = r'./data/quotes.json'
+quotes_path = r'./app/data/quotes.json'
 
 def getQuote(hero):
 

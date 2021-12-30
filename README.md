@@ -12,6 +12,17 @@ If you want to run this via docker, see the docker section.
 
 # Config Files 
 
+## virtual environment
+
+I lean into using a venv for basically everything, especiall development. 
+
+1. Run `python3 -m venv venv`
+2. Then activate the venv:
+   1. Windows: `./venv/scripts/activate`
+   2. *nix: `source ./venv/bin/activate`
+3. Finally, install the modules:
+   1. `python3 -m pip install -r requirements.txt`
+
 ## .env 
 
 This is an environmental file that hold the discord token, and other configs.
